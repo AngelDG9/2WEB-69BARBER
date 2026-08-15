@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>69 BARBER · Barbería en Jerez de la Frontera</title>
+  <meta name="description" content="69 BARBER · Barbería urbana en Jerez de la Frontera. Cortes clásicos y modernos, degradados, fades, arreglo de barba y asesoramiento de imagen. 4.95★ con 78 opiniones verificadas.">
+  <link rel="icon" type="image/svg+xml" href="imagenes/logo-69.svg">
+  <link rel="stylesheet" href="estilos/estilos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Open+Sans:wght@400;600&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+
+  <header class="header">
+    <a href="#inicio" class="logo">69<span>BARBER</span></a>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle-input" aria-label="Abrir menú">
+    <label for="menu-toggle" class="menu-toggle" aria-label="Menú hamburguesa">
+      <span></span><span></span><span></span>
+    </label>
+    <nav class="nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#galeria">Galería</a>
+      <a href="#resenas">Reseñas</a>
+      <a href="#ubicacion">Ubicación</a>
+      <!-- RESERVAR: apunta a Booksy por ahora. Cuando exista reserva.html, cambiar href a "reserva.html". -->
+      <a href="https://booksy.com/es-es/143823_69thebarber_barberia_26580_jerez-de-la-frontera" target="_blank" rel="noopener noreferrer" class="btn btn-mostaza nav-reservar">Reservar</a>
+    </nav>
+  </header>
+
+  <section id="inicio" class="hero">
+    <div class="barber-pole barber-pole-izq" aria-hidden="true"></div>
+    <div class="barber-pole barber-pole-der" aria-hidden="true"></div>
+    <div class="hero-content">
+      <span class="badge">Jerez de la Frontera · Barbería</span>
+      <img class="hero-logo" src="imagenes/logo-69.png" alt="69 BARBER">
+      <p>Estilo, precisión y actitud. Cortes con carácter, degradados y fades de precisión y la mejor barba de Jerez.</p>
+      <div class="hero-valoracion">
+        <span class="estrellas">★★★★★</span>
+        <span class="valoracion-num">4.95</span>
+        <span class="valoracion-texto">· 78 opiniones verificadas en Google</span>
+      </div>
+      <div class="hero-btns">
+        <a href="https://booksy.com/es-es/143823_69thebarber_barberia_26580_jerez-de-la-frontera" target="_blank" rel="noopener noreferrer" class="btn btn-mostaza">Reservar ahora</a>
+        <a href="#servicios" class="btn btn-borde">Ver servicios</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="franja-confianza">
+    <div class="contenedor">
+      <div class="franja-item">
+        <span class="franja-numero">4.95★</span>
+        <p>Puntuación media en Google</p>
+      </div>
+      <div class="franja-item">
+        <span class="franja-numero">78</span>
+        <p>Opiniones verificadas</p>
+      </div>
+      <div class="franja-item">
+        <span class="franja-numero">100%</span>
+        <p>Referente del cuidado masculino en Cádiz</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicios" class="seccion servicios">
+    <div class="contenedor">
+      <h2>SERVICIOS Y <span class="texto-mostaza">PRECIOS</span></h2>
+      <p class="seccion-subtitulo">Cortes clásicos y modernos, degradados y fades de precisión, arreglo y perfilado de barba, afeitado tradicional a navaja y asesoramiento de imagen personalizado.</p>
+
+      <div class="grid-servicios">
+        <article class="servicio-card">
+          <div class="servicio-info">
+            <h3>Corte caballero</h3>
+            <p>Corte a tijera o máquina según tu estilo.</p>
+          </div>
+          <div class="servicio-precio">10€<span>· 30 min</span></div>
+        </article>
+
+        <article class="servicio-card">
+          <div class="servicio-info">
+            <h3>Corte con arreglo de barba</h3>
+            <p>Corte completo más perfilado y acabado de barba.</p>
+          </div>
+          <div class="servicio-precio">13€<span>· 30 min</span></div>
+        </article>
+
+        <article class="servicio-card">
+          <div class="servicio-info">
+            <h3>Corte con perilla y bigote</h3>
+            <p>Corte más arreglo de perilla y bigote a tu medida.</p>
+          </div>
+          <div class="servicio-precio">12€<span>· 30 min</span></div>
+        </article>
+
+        <article class="servicio-card">
+          <div class="servicio-info">
+            <h3>Arreglo de barba</h3>
+            <p>Perfilado, definición de líneas y afeitado de contorno.</p>
+          </div>
+          <div class="servicio-precio">7€<span>· 30 min</span></div>
+        </article>
+
+        <article class="servicio-card">
+          <div class="servicio-info">
+            <h3>Mechas blancas</h3>
+            <p>Reflejos blancos de moda. Corte incluido.</p>
+          </div>
+          <div class="servicio-precio">30€<span>· 2h 30 min</span></div>
+        </article>
+
+        <article class="servicio-card">
+          <div class="servicio-info">
+            <h3>Tinte cabeza blanca</h3>
+            <p>Color platinado total con corte incluido.</p>
+          </div>
+          <div class="servicio-precio">40€<span>· 2h 30 min</span></div>
+        </article>
+
+        <article class="servicio-card">
+          <div class="servicio-info">
+            <h3>Línea de color</h3>
+            <p>Trazo de color a elegir para un acabado único.</p>
+          </div>
+          <div class="servicio-precio">20€<span>· 1h 30 min</span></div>
+        </article>
+
+        <article class="servicio-card">
+          <div class="servicio-info">
+            <h3>Tinte + línea de color</h3>
+            <p>Tinte cabeza blanca con línea de color a elegir.</p>
+          </div>
+          <div class="servicio-precio">45€<span>· 2h 30 min</span></div>
+        </article>
+      </div>
+
+      <div class="servicios-btns">
+        <a href="https://booksy.com/es-es/143823_69thebarber_barberia_26580_jerez-de-la-frontera" target="_blank" rel="noopener noreferrer" class="btn btn-mostaza">Reservar tu corte</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="galeria" class="seccion galeria">
+    <div class="contenedor">
+      <h2>EL <span class="texto-mostaza">LOCAL</span></h2>
+      <p class="seccion-subtitulo">Nuestro espacio, nuestros cortes y nuestro equipo. Fotos reales en camino.</p>
+
+      <div class="grid-galeria">
+        <!-- GALERÍA: placeholders. Sustituir cada <div class="galeria-mockup"> por un <figure><img src="..."></figure>.
+             Formatos: .webp o .jpg optimizados (aprox. 1200px de ancho). -->
+        <div class="galeria-item galeria-grande">
+          <div class="galeria-mockup"><span>FOTO DEL LOCAL</span></div>
+        </div>
+        <div class="galeria-item">
+          <div class="galeria-mockup"><span>FOTO DE CORTES</span></div>
+        </div>
+        <div class="galeria-item">
+          <div class="galeria-mockup"><span>FOTO DEL PELUQUERO</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resenas" class="seccion resenas">
+    <div class="contenedor">
+      <h2>LO QUE DICEN <span class="texto-mostaza">NUESTROS CLIENTES</span></h2>
+      <p class="seccion-subtitulo">4.95 de 5 con 78 opiniones verificadas en Google.</p>
+
+      <div class="grid-resenas">
+        <article class="resena-card">
+          <div class="resena-cabecera">
+            <span class="resena-nombre">Cliente verificado</span>
+            <span class="estrellas">★★★★★</span>
+          </div>
+          <p>"Calidad constante en cada corte y un trato cercano. La higiene y el orden del local son impecables. Sin duda, el referente del cuidado masculino en Jerez."</p>
+        </article>
+        <article class="resena-card">
+          <div class="resena-cabecera">
+            <span class="resena-nombre">Cliente verificado</span>
+            <span class="estrellas">★★★★★</span>
+          </div>
+          <p>"No hay prisa ni improvisación: cada visita empieza con una conversación real y termina con un resultado que cumple, o supera, las expectativas."</p>
+        </article>
+      </div>
+
+      <div class="resenas-btns">
+        <a href="https://maps.app.goo.gl/KNiUku1YuMFyhehTA" target="_blank" rel="noopener noreferrer" class="btn btn-borde">Ver todas las opiniones</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="ubicacion" class="seccion ubicacion">
+    <div class="contenedor-ubicacion">
+      <h2>DÓNDE <span class="texto-mostaza">ESTAMOS</span></h2>
+      <p class="ubicacion-subtitulo">En el corazón de Jerez de la Frontera. <span class="texto-mostaza subrayado-mostaza">Pásate y cuéntanos qué quieres.</span></p>
+
+      <div class="rejilla-ubicacion">
+        <div class="tarjeta-ubicacion">
+          <h3>INFORMACIÓN</h3>
+          <ul class="lista-ubicacion">
+            <li>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <div>
+                <strong>DIRECCIÓN</strong>
+                <span>Calle Mozart (Glorieta Guitarra) · 11406 Jerez de la Frontera</span>
+              </div>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+              <div>
+                <strong>TELÉFONO</strong>
+                <a href="tel:611447133">611 44 71 33</a>
+              </div>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+              </svg>
+              <div>
+                <strong>INSTAGRAM</strong>
+                <a href="https://www.instagram.com/69thebarber_/" target="_blank" rel="noopener noreferrer">@69thebarber_</a>
+              </div>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2Z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <div>
+                <strong>EMAIL</strong>
+                <a href="mailto:abelgutierrez632@gmail.com">abelgutierrez632@gmail.com</a>
+              </div>
+            </li>
+          </ul>
+
+          <div class="horario-marco">
+            <h4>HORARIO</h4>
+            <ul class="lista-horario">
+              <li><span>Lunes</span><span>17:00 – 21:00</span></li>
+              <li><span>Martes</span><span>10:00 – 14:00 · 17:00 – 21:00</span></li>
+              <li><span>Miércoles</span><span>10:00 – 14:00 · 17:00 – 21:00</span></li>
+              <li><span>Jueves</span><span>10:00 – 14:00 · 17:00 – 21:00</span></li>
+              <li><span>Viernes</span><span>10:00 – 14:00 · 17:00 – 21:00</span></li>
+              <li><span>Sábado</span><span>10:00 – 14:00</span></li>
+              <li class="cerrado"><span>Domingo</span><span>Cerrado</span></li>
+            </ul>
+          </div>
+
+          <div class="ubicacion-btns">
+            <a href="https://maps.app.goo.gl/KNiUku1YuMFyhehTA" target="_blank" rel="noopener noreferrer" class="btn btn-mostaza">Cómo llegar</a>
+            <a href="https://booksy.com/es-es/143823_69thebarber_barberia_26580_jerez-de-la-frontera" target="_blank" rel="noopener noreferrer" class="btn btn-borde">Reservar cita</a>
+          </div>
+        </div>
+
+        <div class="mapa-marco">
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contacto" class="footer">
+    <div>
+      <h3>69 BARBER</h3>
+      <p>Jerez de la Frontera, Cádiz</p>
+    </div>
+    <div class="footer-contacto">
+      <h3>Redes Sociales</h3>
+      <p>Síguenos para ver los últimos cortes y novedades.</p>
+      <div class="redes-sociales">
+        <a href="https://www.instagram.com/69thebarber_/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://barbershopmap.com/barberias/cadiz/jerez-de-la-frontera/69thebarber-1284" target="_blank" rel="noopener noreferrer">BarbershopMap</a>
+      </div>
+    </div>
+    <div>
+      <h3>Legal</h3>
+      <!-- POLÍTICAS: enlaces placeholder para futuras páginas. -->
+      <p class="footer-legal"><a href="#contacto">Política de privacidad</a> · <a href="#contacto">Aviso legal</a></p>
+    </div>
+    <div>
+      <p>&copy; 2026 69 BARBER · 2WEB Project</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    const map = L.map('map').setView([36.6828422, -6.1109387], 17);
+
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
+    }).addTo(map);
+
+    L.marker([36.6828422, -6.1109387]).addTo(map)
+      .bindPopup('<b>69 BARBER</b><br>Calle Mozart (Glorieta Guitarra)')
+      .openPopup();
+  </script>
+</body>
+</html>
