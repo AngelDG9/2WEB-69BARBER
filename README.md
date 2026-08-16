@@ -43,3 +43,4 @@ Se necesita internet para las fuentes de Google, el mapa y la librería Leaflet 
 - **Servicios**: tarjetas `<article class="servicio-card">` en `index.html`.
 - **Mapa**: coordenadas en `L.map('map').setView([lat, lng], zoom)` y en `L.marker([lat, lng])`.
 - **Horario**: lista `<ul class="lista-horario">` en la sección Ubicación.
+### hola
