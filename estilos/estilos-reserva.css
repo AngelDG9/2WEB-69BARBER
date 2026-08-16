@@ -1,0 +1,101 @@
+/* --- ESTILOS DE LA PÁGINA DE RESERVA --- */
+.seccion-reserva { max-width: 800px; margin: 0 auto; }
+.form-reserva { display: flex; flex-direction: column; gap: 40px; }
+
+.paso-reserva {
+  background-color: var(--negro-tarjeta);
+  border: 1px solid #222;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.paso-titulo {
+  font-family: var(--fuente-titulo);
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.paso-titulo span {
+  background-color: var(--mostaza);
+  color: var(--negro-fondo);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 0.9rem;
+}
+
+.grid-reserva-servicios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.tarjeta-opcion { position: relative; cursor: pointer; }
+.tarjeta-opcion input { position: absolute; opacity: 0; }
+
+.opcion-contenido {
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  transition: 0.2s;
+}
+
+.opcion-contenido p { font-size: 0.8rem; color: var(--gris-texto); }
+.opcion-contenido .precio { font-family: var(--fuente-titulo); font-weight: 800; color: var(--mostaza); }
+
+.tarjeta-opcion input:checked + .opcion-contenido {
+  border-color: var(--mostaza);
+  background-color: rgba(217, 165, 20, 0.1);
+}
+
+.grid-fecha-hora { display: grid; gap: 20px; }
+
+.campo-grupo { display: flex; flex-direction: column; gap: 8px; }
+.campo-grupo label { font-family: var(--fuente-titulo); font-size: 0.85rem; color: var(--gris-texto); }
+
+.input-form {
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 12px;
+  color: var(--blanco);
+  font-family: var(--fuente-cuerpo);
+  outline: none;
+}
+
+.input-form:focus { border-color: var(--mostaza); }
+
+.grid-horas { display: flex; flex-wrap: wrap; gap: 10px; }
+.hora-opcion input { display: none; }
+.hora-opcion span {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: var(--fuente-titulo);
+  font-size: 0.85rem;
+}
+
+.hora-opcion input:checked + span {
+  background: var(--mostaza);
+  color: var(--negro-fondo);
+  font-weight: 800;
+}
+
+.grid-datos { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.campo-full { grid-column: 1 / -1; }
+
+.btn-confirmar { width: 100%; border: none; cursor: pointer; padding: 16px; font-size: 1.1rem; }

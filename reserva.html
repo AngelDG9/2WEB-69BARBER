@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserva tu Cita · 69 BARBER</title>
+  <link rel="icon" type="image/svg+xml" href="imagenes/logo-69.svg">
+  <link rel="stylesheet" href="estilos/estilos.css">
+  <link rel="stylesheet" href="estilos/estilos-reserva.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Open+Sans:wght@400;600&family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="header">
+    <a href="index.html" class="logo">69<span>BARBER</span></a>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle-input" aria-label="Abrir menú">
+    <label for="menu-toggle" class="menu-toggle" aria-label="Menú hamburguesa">
+      <span></span><span></span><span></span>
+    </label>
+    <nav class="nav">
+      <a href="index.html#inicio">Inicio</a>
+      <a href="index.html#servicios">Servicios</a>
+      <a href="index.html#galeria">Galería</a>
+      <a href="index.html#resenas">Reseñas</a>
+      <a href="index.html#ubicacion">Ubicación</a>
+      <a href="reserva.html" class="btn btn-mostaza nav-reservar">Reservar</a>
+    </nav>
+  </header>
+
+  <section class="seccion seccion-reserva">
+    <div class="contenedor">
+      <h2>RESERVA TU <span class="texto-mostaza">CITA</span></h2>
+      <p class="seccion-subtitulo">Elige tu servicio, fecha y hora en menos de un minuto.</p>
+
+      <form class="form-reserva" action="#" method="POST">
+        
+        <div class="paso-reserva">
+          <h3 class="paso-titulo"><span>1</span> Selecciona el servicio</h3>
+          <div class="grid-reserva-servicios">
+            
+            <label class="tarjeta-opcion">
+              <input type="radio" name="servicio" value="corte-caballero" required>
+              <div class="opcion-contenido">
+                <div>
+                  <strong>Corte caballero</strong>
+                  <p>30 min</p>
+                </div>
+                <span class="precio">10€</span>
+              </div>
+            </label>
+
+            <label class="tarjeta-opcion">
+              <input type="radio" name="servicio" value="corte-barba">
+              <div class="opcion-contenido">
+                <div>
+                  <strong>Corte con arreglo de barba</strong>
+                  <p>30 min</p>
+                </div>
+                <span class="precio">13€</span>
+              </div>
+            </label>
+
+            <label class="tarjeta-opcion">
+              <input type="radio" name="servicio" value="corte-perilla">
+              <div class="opcion-contenido">
+                <div>
+                  <strong>Corte con perilla y bigote</strong>
+                  <p>30 min</p>
+                </div>
+                <span class="precio">12€</span>
+              </div>
+            </label>
+
+            <label class="tarjeta-opcion">
+              <input type="radio" name="servicio" value="arreglo-barba">
+              <div class="opcion-contenido">
+                <div>
+                  <strong>Arreglo de barba</strong>
+                  <p>30 min</p>
+                </div>
+                <span class="precio">7€</span>
+              </div>
+            </label>
+
+            <label class="tarjeta-opcion">
+              <input type="radio" name="servicio" value="mechas-blancas">
+              <div class="opcion-contenido">
+                <div>
+                  <strong>Mechas blancas</strong>
+                  <p>2h 30 min</p>
+                </div>
+                <span class="precio">30€</span>
+              </div>
+            </label>
+
+            <label class="tarjeta-opcion">
+              <input type="radio" name="servicio" value="linea-color">
+              <div class="opcion-contenido">
+                <div>
+                  <strong>Línea de color</strong>
+                  <p>1h 30 min</p>
+                </div>
+                <span class="precio">20€</span>
+              </div>
+            </label>
+
+            <label class="tarjeta-opcion">
+              <input type="radio" name="servicio" value="tinte-linea">
+              <div class="opcion-contenido">
+                <div>
+                  <strong>Tinte + Línea de color</strong>
+                  <p>2h 30 min</p>
+                </div>
+                <span class="precio">45€</span>
+              </div>
+            </label>
+
+            <label class="tarjeta-opcion">
+              <input type="radio" name="servicio" value="tinte-blanco">
+              <div class="opcion-contenido">
+                <div>
+                  <strong>Tinte cabeza blanca</strong>
+                  <p>2h 30 min</p>
+                </div>
+                <span class="precio">40€</span>
+              </div>
+            </label>
+
+          </div>
+        </div>
+
+        <div class="paso-reserva">
+          <h3 class="paso-titulo"><span>2</span> Selecciona fecha y hora</h3>
+          <div class="grid-fecha-hora">
+            <div class="campo-grupo">
+              <label for="fecha">Fecha</label>
+              <input type="date" id="fecha" name="fecha" class="input-form" required>
+            </div>
+            
+            <div class="campo-grupo">
+              <label>Horas disponibles</label>
+              <div class="grid-horas">
+                <label class="hora-opcion"><input type="radio" name="hora" value="10:00" required><span>10:00</span></label>
+                <label class="hora-opcion"><input type="radio" name="hora" value="11:00"><span>11:00</span></label>
+                <label class="hora-opcion"><input type="radio" name="hora" value="12:00"><span>12:00</span></label>
+                <label class="hora-opcion"><input type="radio" name="hora" value="13:00"><span>13:00</span></label>
+                <label class="hora-opcion"><input type="radio" name="hora" value="17:00"><span>17:00</span></label>
+                <label class="hora-opcion"><input type="radio" name="hora" value="18:00"><span>18:00</span></label>
+                <label class="hora-opcion"><input type="radio" name="hora" value="19:00"><span>19:00</span></label>
+                <label class="hora-opcion"><input type="radio" name="hora" value="20:00"><span>20:00</span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="paso-reserva">
+          <h3 class="paso-titulo"><span>3</span> Tus datos</h3>
+          <div class="grid-datos">
+            <div class="campo-grupo">
+              <label for="nombre">Nombre completo</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" class="input-form" required>
+            </div>
+            <div class="campo-grupo">
+              <label for="telefono">Teléfono (WhatsApp)</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="600 000 000" class="input-form" required>
+            </div>
+            <div class="campo-grupo campo-full">
+              <label for="email">Correo electrónico</label>
+              <input type="email" id="email" name="email" placeholder="tu@email.com" class="input-form" required>
+            </div>
+            <div class="campo-grupo campo-full">
+              <label for="notas">Notas adicionales (opcional)</label>
+              <textarea id="notas" name="notas" rows="3" placeholder="¿Alguna especificación sobre tu corte?" class="input-form"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-mostaza btn-confirmar">Confirmar reserva</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div>
+      <h3>69 BARBER</h3>
+      <p>Jerez de la Frontera, Cádiz</p>
+    </div>
+    <div class="footer-contacto">
+      <h3>Redes Sociales</h3>
+      <div class="redes-sociales">
+        <a href="https://www.instagram.com/69thebarber_/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+    </div>
+    <div>
+      <p>&copy; 2026 69 BARBER · 2WEB Project</p>
+    </div>
+  </footer>
+
+</body>
+</html>
