@@ -1,12 +1,12 @@
 const products=[
- {id:1,name:"Pomada Matte 69",cat:"Cabello",price:14.90,icon:"🧴",desc:"Acabado mate, fijación firme y textura natural.",badge:"TOP"},
- {id:2,name:"Cera Premium 69",cat:"Cabello",price:12.90,icon:"🥫",desc:"Control y definición para cualquier peinado."},
- {id:3,name:"Aceite para Barba",cat:"Barba",price:15.90,icon:"🧴",desc:"Suaviza, hidrata y aporta brillo ligero.",badge:"BEST SELLER"},
- {id:4,name:"Bálsamo para Barba",cat:"Barba",price:16.90,icon:"🧴",desc:"Cuidado diario y control de la barba."},
- {id:5,name:"Champú Barber",cat:"Cuidado",price:13.90,icon:"🧼",desc:"Limpieza suave para cabello y cuero cabelludo."},
- {id:6,name:"Peine Profesional",cat:"Accesorios",price:8.90,icon:"🪮",desc:"Peine resistente para cortes y styling."},
- {id:7,name:"Cepillo para Barba",cat:"Barba",price:11.90,icon:"🪥",desc:"Fibras firmes para ordenar y peinar la barba."},
- {id:8,name:"Polvo Volumen 69",cat:"Cabello",price:17.90,icon:"✨",desc:"Volumen instantáneo y acabado natural.",badge:"NUEVO"}
+ {id:1,name:"Pomada Matte 69",cat:"Cabello",price:16.91,image:"../imagenes/tienda/cera-1.jpg",desc:"Acabado mate, fijación firme y textura natural.",badge:"TOP"},
+ {id:2,name:"Cera Premium 69",cat:"Cabello",price:16.91,image:"../imagenes/tienda/cera-2.jpg",desc:"Control y definición para cualquier peinado."},
+ {id:3,name:"Aceite para Barba",cat:"Barba",price:15.90, image:"../imagenes/tienda/ritual.jpg",desc:"Suaviza, hidrata y aporta brillo ligero.",badge:"BEST SELLER"},
+ {id:4,name:"Bálsamo para Barba",cat:"Barba",price:16.90,image:"../imagenes/tienda/recortadora.jpg",desc:"Cuidado diario y control de la barba."},
+ {id:5,name:"Lote Barber",cat:"Cuidado",price:130.90,image:"../imagenes/tienda/spray.jpg",desc:"Limpieza suave para cabello y cuero cabelludo."},
+ {id:6,name:"Secador Profesional",cat:"Accesorios",price:180.90,image:"../imagenes/tienda/secador.jpg",desc:"Peine resistente para cortes y styling."},
+ {id:7,name:"Cepillo para Barba",cat:"Barba",price:11.90,image:"../imagenes/tienda/pack-pro.jpg",desc:"Fibras firmes para ordenar y peinar la barba."},
+ {id:8,name:"Polvo Volumen 69",cat:"Cabello",price:17.90,image:"../imagenes/tienda/laca.jpg",desc:"Volumen instantáneo y acabado natural.",badge:"NUEVO"}
 ];
 let cart=JSON.parse(localStorage.getItem("69cart")||"[]");
 
@@ -15,7 +15,7 @@ function renderProducts(cat="Todos"){
  const box=document.getElementById("products");
  box.innerHTML=products.filter(p=>cat==="Todos"||p.cat===cat).map(p=>`
  <article class="card">
-   <div class="product-img">${p.badge?`<span class="badge">${p.badge}</span>`:""}${p.icon}</div>
+   <div class="product-img">${p.badge?`<span class="badge">${p.badge}</span>`:""} <img src= "${p.image}" alt= "${p.name}" width="200px" height="250px">  </div>
    <div class="card-body">
     <div class="category">${p.cat}</div><h3>${p.name}</h3><p class="desc">${p.desc}</p>
     <div class="price">${money(p.price)}</div>
