@@ -395,12 +395,16 @@ body {
 .grid-galeria {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 300px);
+  grid-template-rows: repeat(3, 220px);
   gap: 18px;
 }
 
 .galeria-grande {
-  grid-row: span 2;
+  grid-row: span 3;
+}
+
+.galeria-oculta {
+  display: none;
 }
 
 .galeria-item {
@@ -902,7 +906,7 @@ body {
 
   .grid-galeria {
     grid-template-columns: 1fr;
-    grid-template-rows: 300px 220px 220px 220px 220px;
+    grid-template-rows: 320px 220px 220px 220px;
   }
 
   .galeria-grande {

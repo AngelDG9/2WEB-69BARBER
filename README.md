@@ -13,7 +13,7 @@ HTML, CSS y JavaScript vanilla. Sin frameworks, sin build, sin complicaciones: s
 - **Hero** — wordmark gigante estilo grafiti con el logo del local (1024×512), dos postes de barbería a los lados, la valoración de Google (4.95★ · 78 opiniones) y CTA a reservar.
 - **Franja de confianza** — la puntuación de Google en números gordos mostaza.
 - **Servicios y precios** — los 8 servicios con su precio y duración reales (corte 10€, arreglo de barba 7€, mechas blancas 30€, tinte 40€, línea de color 20€...).
-- **Galería** — collage de 5 fotos del local, cortes y peinados. Cada una es clicable y se abre en un lightbox (cerrar ×, flechas y teclado ←/→/Esc); cuando sobran, la última celda agrupa con un contador "+N".
+- **Galería** — collage compacto de 4 fotos (1 grande + 3) del local, cortes y peinados, con una celda "+2" que agrupa el resto. Cada foto es clicable y se abre en un lightbox (cerrar ×, flechas y teclado ←/→/Esc); las imágenes agrupadas viajan detrás del contador.
 - **Reseñas** — teaser con la valoración y un par de testimonios verificados.
 - **Ubicación y horario** — tarjeta con dirección, teléfono, Instagram y email + mapa oscuro Leaflet (Glorieta Guitarra) + tabla de horarios completa.
 - **Footer** — contacto, redes sociales y enlaces placeholder de políticas.
@@ -48,6 +48,6 @@ Se necesita internet para las fuentes de Google, el mapa y la librería Leaflet 
 
 - **Colores y tipografías**: variables en `:root` al inicio de `estilos/estilos.css` (`--mostaza`, `--negro-fondo`, etc.).
 - **Servicios**: tarjetas `<article class="servicio-card">` en `index.html`.
-- **Galería**: fotos en `<figure class="galeria-item" data-full="...">` del `.grid-galeria` de `index.html`; la lógica de ampliación vive en `scripts/galeria.js`.
+- **Galería**: las fotos visibles van en `<figure class="galeria-item" data-full="...">` del `.grid-galeria` de `index.html`; las que se agrupan detrás del contador llevan la clase `galeria-oculta`. El "cómo funciona" está en `scripts/galeria.js`.
 - **Mapa**: coordenadas en `L.map('map').setView([lat, lng], zoom)` y en `L.marker([lat, lng])`.
 - **Horario**: lista `<ul class="lista-horario">` en la sección Ubicación.
