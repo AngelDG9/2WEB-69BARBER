@@ -143,18 +143,25 @@
   <section id="galeria" class="seccion galeria">
     <div class="contenedor">
       <h2>EL <span class="texto-mostaza">LOCAL</span></h2>
-      <p class="seccion-subtitulo">Nuestro espacio, nuestros cortes y nuestro equipo. Fotos reales en camino.</p>
+      <p class="seccion-subtitulo">Nuestro espacio, nuestros cortes y nuestro equipo. Toca una foto para ampliarla.</p>
 
       <div class="grid-galeria">
-        <div class="galeria-item galeria-grande">
-          <div class="galeria-mockup"><img src="imagenes/local/local-4.jpeg" alt="FOTO DEL LOCAL"></div>
-        </div>
-        <div class="galeria-item">
-          <div class="galeria-mockup"><img src="imagenes/local/local-2.jpeg" alt="FOTO DE CORTES"></div>
-        </div>
-        <div class="galeria-item">
-          <div class="galeria-mockup"><img src="imagenes/local/local-3.jpeg" alt="FOTO DEL PELUQUERO"></div>
-        </div>
+        <figure class="galeria-item galeria-grande" data-full="imagenes/local/local-4.jpeg">
+          <img src="imagenes/local/local-4.jpeg" alt="El local de 69 BARBER">
+        </figure>
+        <figure class="galeria-item" data-full="imagenes/local/local-3.jpeg">
+          <img src="imagenes/local/local-3.jpeg" alt="Nuestros cortes">
+        </figure>
+        <figure class="galeria-item" data-full="imagenes/local/peinado-1.jpeg">
+          <img src="imagenes/local/peinado-1.jpeg" alt="Peinado y degradado">
+        </figure>
+        <figure class="galeria-item galeria-mas" data-full="imagenes/local/peinado-2.jpeg">
+          <img src="imagenes/local/peinado-2.jpeg" alt="Peinado y barba">
+          <span class="galeria-mas-num">+2</span>
+        </figure>
+        <figure class="galeria-item galeria-oculta" data-full="imagenes/local/local-2.jpeg">
+          <img src="imagenes/local/local-2.jpeg" alt="Detalles del local">
+        </figure>
       </div>
     </div>
   </section>
@@ -287,7 +294,17 @@
     </div>
   </footer>
 
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox-cerrar" aria-label="Cerrar">×</button>
+    <button class="lightbox-nav lightbox-anterior" aria-label="Anterior">&#10094;</button>
+    <figure class="lightbox-figura">
+      <img class="lightbox-img" src="" alt="">
+    </figure>
+    <button class="lightbox-nav lightbox-siguiente" aria-label="Siguiente">&#10095;</button>
+  </div>
+
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="scripts/galeria.js"></script>
   <script>
     const map = L.map('map').setView([36.6828422, -6.1109387], 17);
 
