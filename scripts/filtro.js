@@ -36,7 +36,7 @@ function renderCart(){
  let total=0;
  box.innerHTML=cart.map(item=>{
   const p=products.find(x=>x.id===item.id); const sub=p.price*item.qty; total+=sub;
-  return `<div class="cart-row"><div class="thumb">${p.icon}</div><div><strong>${p.name}</strong><br><small>${money(p.price)} · ${p.cat}</small>
+  return `<div class="cart-row"><img src= "${p.image}" alt= "${p.name}" width="60px" height="75px"><div><strong>${p.name}</strong><br><small>${money(p.price)} · ${p.cat}</small>
   <div class="qty"><button onclick="changeQty(${p.id},-1)">−</button><span>${item.qty}</span><button onclick="changeQty(${p.id},1)">+</button>
   <button class="remove" onclick="removeItem(${p.id})">Eliminar</button></div></div><strong>${money(sub)}</strong></div>`
  }).join("");
