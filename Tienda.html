@@ -1,105 +1,125 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/svg+xml" href="imagenes/logo-69.svg">
-<link rel="stylesheet" href="estilos/estilos.css">
-<link rel="stylesheet" href="estilos/estilos-tienda.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-<title>69THEBARBER · Barber Shop Jerez</title>
-<meta name="description" content="69THEBARBER · Barbería y tienda de productos premium en Jerez de la Frontera.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="imagenes/logo-69.svg">
+  <link rel="stylesheet" href="estilos/estilos.css">
+  <link rel="stylesheet" href="estilos/estilos-tienda.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Open+Sans:wght@400;600&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <title>69THEBARBER · Tienda</title>
+  <meta name="description" content="69THEBARBER · Tienda de productos de barbería en Jerez de la Frontera.">
 </head>
 <body>
-<header>
-  <div class="container nav">
-    <a class="logo" href="#inicio">69<span>THE</span>BARBER</a>
-    <nav><a href="#tienda">Tienda</a><a href="#nosotros">La barbería</a><a href="#contacto">Contacto</a></nav>
-    <button class="cart-btn" onclick="openCart()">🛒 Carrito <span id="cartCount">(0)</span></button>
-  </div>
+
+<header class="header">
+  <a href="index.html" class="logo">69<span>BARBER</span></a>
+  <input type="checkbox" id="menu-toggle" class="menu-toggle-input" aria-label="Abrir menú">
+  <label for="menu-toggle" class="menu-toggle" aria-label="Menú hamburguesa">
+    <span></span><span></span><span></span>
+  </label>
+  <nav class="nav">
+    <a href="index.html">Inicio</a>
+    <a href="#tienda">Tienda</a>
+    <a href="#nosotros">La barbería</a>
+    <a href="#contacto">Contacto</a>
+    <button class="btn btn-mostaza nav-carrito" onclick="openCart()">🛒 Carrito <span id="cartCount">(0)</span></button>
+    <a href="reserva.html" class="btn btn-mostaza nav-reservar">Reservar</a>
+  </nav>
 </header>
 
 <main>
-<section class="hero" id="inicio">
+<section class="hero hero-tienda" id="inicio">
   <div class="hero-content">
-    <div class="kicker">Jerez de la Frontera · Cádiz</div>
-    <h1>69THEBARBER</h1>
+    <span class="badge">Jerez de la Frontera · Tienda</span>
+    <img class="hero-logo" src="imagenes/logo-69.png" alt="69 BARBER">
     <p>Estilo, precisión y actitud. Descubre nuestra selección de productos para mantener el look de barbería también en casa.</p>
-    <div class="actions">
-      <a class="primary" href="#tienda">Ver productos</a>
-      <a class="secondary" href="#contacto">Visítanos</a>
+    <div class="hero-btns">
+      <a class="btn btn-mostaza" href="#tienda">Ver productos</a>
+      <a class="btn btn-borde" href="#contacto">Visítanos</a>
     </div>
   </div>
 </section>
 
-<section id="tienda">
-<div class="container">
-  <div class="section-head">
-    <div><div class="kicker">Shop</div><h2>Productos de barbería</h2></div>
-    <p>Calidad profesional para tu rutina diaria.</p>
+<section id="tienda" class="seccion tienda-seccion">
+  <div class="contenedor">
+    <div class="tienda-cabecera">
+      <div>
+        <div class="kicker">Shop · 69THEBARBER</div>
+        <h2>PRODUCTOS DE <span class="texto-mostaza">BARBERÍA</span></h2>
+      </div>
+      <p class="tienda-descripcion">Calidad profesional para tu rutina diaria.</p>
+    </div>
+
+    <div class="filters" id="filters">
+      <button class="filter active" data-cat="Todos">Todos</button>
+      <button class="filter" data-cat="Cabello">Cabello</button>
+      <button class="filter" data-cat="Barba">Barba</button>
+      <button class="filter" data-cat="Accesorios">Accesorios</button>
+      <button class="filter" data-cat="Cuidado">Cuidado</button>
+    </div>
+
+    <div class="grid" id="products"></div>
   </div>
-  <div class="filters" id="filters">
-    <button class="filter active" data-cat="Todos">Todos</button>
-    <button class="filter" data-cat="Cabello">Cabello</button>
-    <button class="filter" data-cat="Barba">Barba</button>
-    <button class="filter" data-cat="Accesorios">Accesorios</button>
-    <button class="filter" data-cat="Cuidado">Cuidado</button>
-  </div>
-  <div class="grid" id="products"></div>
-</div>
 </section>
 
-<section class="about" id="nosotros">
-<div class="container about-grid">
-  <div>
-    <div class="kicker">69THEBARBER</div>
-    <h2>El estilo empieza en el detalle.</h2>
-    <p>Una propuesta de barbería con carácter en Jerez. Hemos preparado esta tienda para que puedas llevarte a casa una selección de básicos para cabello, barba y cuidado personal.</p>
-    <div class="info">
-      <div><strong>Ubicación</strong>Jerez de la Frontera</div>
-      <div><strong>Concepto</strong>Barbería & lifestyle</div>
-      <div><strong>Compra</strong>Carrito online</div>
-      <div><strong>Entrega</strong>Configurable</div>
+<section class="seccion tienda-about" id="nosotros">
+  <div class="contenedor about-grid">
+    <div>
+      <div class="kicker">69THEBARBER</div>
+      <h2>EL ESTILO EMPIEZA <span class="texto-mostaza">EN EL DETALLE.</span></h2>
+      <p>Una propuesta de barbería con carácter en Jerez. Hemos preparado esta tienda para que puedas llevarte a casa una selección de básicos para cabello, barba y cuidado personal.</p>
+      <div class="info">
+        <div><strong>Ubicación</strong>Jerez de la Frontera</div>
+        <div><strong>Concepto</strong>Barbería &amp; lifestyle</div>
+        <div><strong>Compra</strong>Carrito online</div>
+        <div><strong>Entrega</strong>Configurable</div>
+      </div>
     </div>
   </div>
-</div>
 </section>
 
-<section id="contacto">
-<div class="container">
-  <div class="cta">
-    <div class="kicker">Jerez · 69THEBARBER</div>
-    <h2>¿Listo para tu próximo look?</h2>
-    <p>Visítanos en Jerez o utiliza la tienda para preparar tus productos favoritos.</p>
-    <div class="actions">
-      <a class="primary" href="https://www.google.com/maps/search/?api=1&query=Calle%20Mozart%2C%20Jerez%20de%20la%20Frontera" target="_blank">Cómo llegar</a>
-      <a class="secondary" href="#tienda">Comprar ahora</a>
+<section id="contacto" class="seccion tienda-contacto">
+  <div class="contenedor">
+    <div class="cta">
+      <div class="kicker">Jerez · 69THEBARBER</div>
+      <h2>¿LISTO PARA TU PRÓXIMO LOOK?</h2>
+      <p>Visítanos en Jerez o utiliza la tienda para preparar tus productos favoritos.</p>
+      <div class="actions">
+        <a class="btn btn-mostaza" href="https://www.google.com/maps/search/?api=1&amp;query=Calle%20Mozart%2C%20Jerez%20de%20la%20Frontera" target="_blank" rel="noopener noreferrer">Cómo llegar</a>
+        <a class="btn btn-borde" href="#tienda">Comprar ahora</a>
+      </div>
     </div>
   </div>
-</div>
 </section>
 </main>
 
-<footer>
-<div class="container footer-flex">
-  <span>© 2026 69THEBARBER · Jerez de la Frontera</span>
-  <span>Web demo · Productos y precios editables</span>
-</div>
+<footer class="footer">
+  <div>
+    <h3>69<span class="texto-mostaza">BARBER</span></h3>
+    <span>Jerez de la Frontera</span>
+  </div>
+  <div class="footer-contacto">
+    <span>Web demo · Productos y precios editables</span>
+  </div>
 </footer>
 
 <div class="overlay" id="overlay" onclick="if(event.target===this) closeCart()">
   <aside class="cart">
-    <div class="cart-head"><h2>Tu carrito</h2><button class="close" onclick="closeCart()">×</button></div>
+    <div class="cart-head">
+      <h2>Tu carrito</h2>
+      <button class="close" onclick="closeCart()" aria-label="Cerrar carrito">×</button>
+    </div>
     <div class="cart-items" id="cartItems"></div>
     <div class="total">
       <div class="total-line"><span>Total</span><span id="cartTotal">0,00 €</span></div>
-      <button class="primary checkout" onclick="checkout()">Finalizar pedido</button>
+      <button class="btn btn-mostaza checkout" onclick="checkout()">Finalizar pedido</button>
     </div>
   </aside>
 </div>
+
 <div class="notice" id="notice">Producto añadido al carrito</div>
 
 <script src="scripts/filtro.js"></script>
