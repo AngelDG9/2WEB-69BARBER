@@ -29,7 +29,7 @@ function addToCart(id){
  save(); renderCart(); toast("Producto añadido al carrito");
 }
 function save(){localStorage.setItem("69cart",JSON.stringify(cart));updateCount()}
-function updateCount(){document.getElementById("cartCount").textContent=cart.reduce((s,x)=>s+x.qty,0)}
+function updateCount(){document.getElementById("cartCount").textContent="( "+ cart.reduce((s,x)=>s+x.qty,0) + " )" }
 function renderCart(){
  const box=document.getElementById("cartItems");
  if(!cart.length){box.innerHTML='<div class="empty">Tu carrito está vacío.<br>Elige tus productos favoritos.</div>';document.getElementById("cartTotal").textContent=money(0);return}

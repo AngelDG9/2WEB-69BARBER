@@ -9,7 +9,6 @@ select {
 }
 
 .nav-carrito {
-  margin-left: 10px;
   border: 0;
   cursor: pointer;
   white-space: nowrap;
@@ -380,6 +379,10 @@ select {
   border: 0;
   cursor: pointer;
   font-size: 11px;
+  padding: 4px 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .remove:hover {
@@ -430,6 +433,15 @@ select {
 
 .notice.show {
   transform: translateX(-50%) translateY(0);
+}
+
+.uwu:hover{
+  cursor: pointer;
+  transform: translateY(-2px);
+  border-color: var(--mostaza-hover);
+  transition: 1.2s;
+  
+
 }
 
 @media (max-width: 1000px) {
