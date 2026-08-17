@@ -913,18 +913,22 @@ body {
   .galeria-grande {
     grid-row: auto;
   }
-
+  .franja-item{
+    max-width: 220px;
+    margin: 0 auto;
+  }
   .franja-confianza .contenedor {
     flex-direction: column;
     gap: 18px;
   }
 
   .footer {
-    flex-direction: column;
+    display: flex;
     justify-content: center;
-    align-items: flex-start;
-    text-align: left;
-    padding: 30px 5%;
+    text-align: center;
+  }
+  .footer-contacto {
+    align-items: center;
   }
 }
 
