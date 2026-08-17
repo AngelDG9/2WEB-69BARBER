@@ -13,7 +13,7 @@ HTML, CSS y JavaScript vanilla. Sin frameworks, sin build, sin complicaciones: s
 - **Hero** — wordmark gigante estilo grafiti con el logo del local (1024×512), dos postes de barbería a los lados, la valoración de Google (4.95★ · 78 opiniones) y CTA a reservar.
 - **Franja de confianza** — la puntuación de Google en números gordos mostaza.
 - **Servicios y precios** — los 8 servicios con su precio y duración reales (corte 10€, arreglo de barba 7€, mechas blancas 30€, tinte 40€, línea de color 20€...).
-- **Galería** — fotos grandes del local, cortes y peluquero. De momento con placeholders: la multimedia es tarea de Álvaro.
+- **Galería** — collage de 5 fotos del local, cortes y peinados. Cada una es clicable y se abre en un lightbox (cerrar ×, flechas y teclado ←/→/Esc); cuando sobran, la última celda agrupa con un contador "+N".
 - **Reseñas** — teaser con la valoración y un par de testimonios verificados.
 - **Ubicación y horario** — tarjeta con dirección, teléfono, Instagram y email + mapa oscuro Leaflet (Glorieta Guitarra) + tabla de horarios completa.
 - **Footer** — contacto, redes sociales y enlaces placeholder de políticas.
@@ -30,6 +30,13 @@ El logo es horizontal y se dimensiona por ancho: en el header a `max-height: 56p
 
 > Juega con `imagenes/logo-69.png` (logo, 1024×512) y `imagenes/logo-69.svg` (favicon, 512×512).
 
+## Interacción
+
+- **Navegación** — al pasar el cursor, el color cambia y una barra mostaza crece bajo el enlace con un pequeño delay.
+- **Reseñas** — los bordes se iluminan en mostaza al pasar el cursor, como el resto de tarjetas de la web.
+- **Galería** — cada foto abre el lightbox; el "cómo funciona" está en `scripts/galeria.js` (añade fotos al `.grid-galeria` de `index.html` y el contador "+N" se ajusta solo).
+- **Cursor** — el footer, la tarjeta de contacto y el horario muestran `cursor: default` (sin cursor de subrayado); solo los enlaces reales son clicables.
+
 ## Cómo ejecutar
 
 1. Abrir `index.html` en cualquier navegador.
@@ -41,5 +48,6 @@ Se necesita internet para las fuentes de Google, el mapa y la librería Leaflet 
 
 - **Colores y tipografías**: variables en `:root` al inicio de `estilos/estilos.css` (`--mostaza`, `--negro-fondo`, etc.).
 - **Servicios**: tarjetas `<article class="servicio-card">` en `index.html`.
+- **Galería**: fotos en `<figure class="galeria-item" data-full="...">` del `.grid-galeria` de `index.html`; la lógica de ampliación vive en `scripts/galeria.js`.
 - **Mapa**: coordenadas en `L.map('map').setView([lat, lng], zoom)` y en `L.marker([lat, lng])`.
 - **Horario**: lista `<ul class="lista-horario">` en la sección Ubicación.
